@@ -51,13 +51,16 @@ $ python data/shakespeare/prepare.py
 $ python train.py config/finetune_shakespeare.py
 ```
 生成莎士比亚风格的文本
+```
 $ python sample.py --out_dir=out-shakespeare
+```
 可以控制参数，生成不同的文本
 
-参数：--init_from: 初始化模型，可选参数：'gpt2', 'gpt2-medium', 'gpt2-large', 'gpt2-xl'，默认为 'gpt2-xl'\n --start:以什么文本为开头\n 
+参数：--init_from: 初始化模型，可选参数：'gpt2', 'gpt2-medium', 'gpt2-large', 'gpt2-xl'，默认为 'gpt2-xl', --start:以什么文本为开头
+```
 $ python sample.py \
     --init_from=gpt2-xl \
     --start="What is the answer to life, the universe, and everything?" \
     --num_samples=5 --max_new_tokens=100
-    
+ ```
 如果资源和时间重组可以使用来自 OpenAI 的 WebText 数据集（12.9G）来训练，步骤与上面类似。
